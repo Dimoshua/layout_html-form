@@ -4,14 +4,224 @@
     <meta charset="UTF-8">
     <meta
       name="viewport"
-      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+      content="width=device-width, user-scalable=no, initial-scale=1.0,
+               maximum-scale=1.0, minimum-scale=1.0"
     >
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>HTML Form</title>
     <link rel="stylesheet" href="./style.css">
   </head>
   <body>
-    <h1>HTML Form</h1>
     <script type="text/javascript" src="./main.js"></script>
+    <form
+      action="https://github.com/Dimoshua/layout_html-form.git"
+      method="post"
+      oninput="result.value=myrange.value"
+    >
+      <fieldset>
+        <legend>Personal information</legend>
+        <label for="surname">Surname:</label>
+        <input type="text"
+               id  ="surname"
+               name="Personal_information"
+               autocomplete="off"
+               required
+        >
+
+        <div><br></div>
+
+        <label for="name">Name:</label>
+        <input type="text"
+               id  ="name"
+               name="Personal_information"
+               autocomplete="off"
+               required
+        >
+
+        <div><br></div>
+
+        <label for="age">How old are You?</label>
+        <input type="number"
+               id  ="age"
+               name="Personal_information"
+               min = "1" max = "100"
+               value="12"
+               required
+        >
+
+        <div><br></div>
+
+        <label for="dateOfBirth">Full date of birth:</label>
+        <input type="date"
+               id  ="dateOfBirth"
+               min="01.01.1922"
+               max="01.01.2022"
+               name="Personal_information"
+               required
+        >
+
+        <div><br></div>
+
+        <label for="IofAgree">I accept the term of the agreement</label>
+        <input type="checkbox"
+               id  ="IofAgree"
+               name="Personal_information"
+               required
+        >
+      </fieldset>
+
+      <div><br><br></div>
+
+      <fieldset>
+        <legend>Registration</legend>
+        <label for ="myemail">E-mail:</label>
+        <input type="email"
+               id  ="myemail"
+               name="Registration"
+               placeholder="email@example.com"
+               required
+        >
+
+        <div><br></div>
+
+        <label for="mypassword">Password:</label>
+        <input type="password"
+               id  ="mypassword"
+               name="Registration"
+               pattern="\w+"
+               minlength = "5"
+               maxlength = "32"
+               required
+        >
+      </fieldset>
+
+      <div><br><br></div>
+
+      <fieldset>
+        <legend>An interesting fact about you!</legend>
+        <label for="yescats">Do you love cats?</label>
+        <input type="radio"
+               id  ="yescats"
+               name="Interesting_fact"
+               value="Yes"
+               required
+        >
+        <label for="nocats">Yes</label>
+        <input type="radio"
+               id  ="nocats"
+               name="Interesting_fact"
+               value="No"
+               required
+        >
+        <label for="radio">No</label>
+
+        <div><br></div>
+
+        <label for="mycolor">What is your favorite color?</label>
+        <input type="color"
+               id  ="mycolor"
+               name="Interesting_fact"
+               required
+        >
+
+        <div><br></div>
+
+        <label for="mytime">What time do you go to bed?</label>
+        <input type="time"
+               id  ="mytime"
+               step="2"
+               name="Interesting_fact"
+               required
+        >
+
+        <div><br></div>
+
+        <label>What are your favorite brand of cars?
+          <select required multiple>
+            <option value="BMW">BMW</option>
+            <option value="Audi">Audi</option>
+            <option value="Opel">Opel</option>
+            <option value="Maybach">Maybach</option>
+            <option value="Mercedes">Mercedes</option>
+            <option value="Volkswagen">Volkswagen</option>
+            <option value="Porsche">Porsche</option>
+            <option value="Aston Martin">Aston Martin</option>
+            <option value="Bentley">Bentley</option>
+            <option value="Jaguar">Jaguar</option>
+            <option value="Land Rover">Land Rover</option>
+            <option value="Mini">Mini</option>
+            <option value="Rolls-Royce">Rolls-Royce</option>
+            <option value="Bugatti">Bugatti</option>
+            <option value="Citroen">Citroen</option>
+            <option value="Peugeot">Peugeot</option>
+            <option value="Renault">Renault</option>
+            <option value="Alfa_Romeo">Alfa Romeo</option>
+            <option value="Fiat">Fiat</option>
+            <option value="Ferrari">Ferrari</option>
+            <option value="Lamborghini">Lamborghini</option>
+            <option value="Lancia">Lancia</option>
+            <option value="Maserati">Maserati</option>
+            <option value="Volvo">Volvo</option>
+            <option value="Saab">Saab</option>
+            <option value="SEAT">SEAT</option>
+            <option value="Honda">Honda</option>
+            <option value="Lexus">Lexus</option>
+            <option value="Mazda">Mazda</option>
+            <option value="Mitsubishi">Mitsubishi</option>
+            <option value="Nissan">Nissan</option>
+            <option value="Toyota">Toyota</option>
+            <option value="Suzuki">Suzuki</option>
+            <option value="Daewoo">Daewoo</option>
+            <option value="Hyundai">Hyundai</option>
+            <option value="KIA">KIA</option>
+            <option value="Chevrolet">Chevrolet</option>
+            <option value="Ford">Ford</option>
+            <option value="Jeep">Jeep</option>
+            <option value="Tesla">Tesla</option>
+            <option value="Scoda">Scoda</option>
+            <option value="Lada">Lada</option>
+            <option value="another brand">another brand</option>
+          </select>
+        </label>
+
+        <div><br></div>
+
+        <label for="myrange">How do you rate our work?</label>
+        <input type="range"
+               id="myrange"
+               value="0"
+               step ="5"
+               required
+        >
+        <output name="result" for="myrange"></output>
+      </fieldset>
+
+      <div><br><br></div>
+
+      <fieldset>
+        <legend>Additional info:</legend>
+        <label>Comments:
+          <textarea
+            name="comments"
+            row ="5"
+            cols="20"
+         ></textarea>
+        </label>
+
+        <div><br></div>
+
+        <label>Would you recommend us?
+          <select required>
+            <option value="yes">yes</option>
+            <option value="no">no</option>
+          </select>
+        </label>
+
+      </fieldset>
+
+      <div><br><br></div>
+
+      <button type="submit">Submit</button>
+    </form>
   </body>
 </html>
