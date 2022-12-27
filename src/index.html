@@ -19,12 +19,12 @@
       method="post"
       oninput="result.value=myrange.value"
     >
-      <fieldset>
+      <fieldset class="field">
         <legend>Personal information</legend>
         <label for="surname" class="block">Surname:
           <input
             type="text"
-            id  ="surname"
+            id="surname"
             name="Personal_information"
             autocomplete="off"
             required
@@ -34,7 +34,7 @@
         <label for="name" class="block">Name:
           <input
             type="text"
-            id  ="name"
+            id="name"
             name="Personal_information"
             autocomplete="off"
             required
@@ -44,9 +44,10 @@
         <label for="age" class="block">How old are You?
           <input
             type="number"
-            id  ="age"
+            id="age"
             name="Personal_information"
-            min = "1" max = "100"
+            min="1"
+            max="100"
             value="12"
             required
           >
@@ -55,7 +56,7 @@
         <label for="dateOfBirth" class="block">Full date of birth:
           <input
             type="date"
-            id  ="dateOfBirth"
+            id="dateOfBirth"
             min="01.01.1922"
             max="01.01.2022"
             name="Personal_information"
@@ -66,19 +67,19 @@
         <label for="IofAgree">I accept the term of the agreement
           <input
             type="checkbox"
-            id  ="IofAgree"
+            id="IofAgree"
             name="Personal_information"
             required
           >
         </label>
       </fieldset>
 
-      <fieldset>
+      <fieldset class="field">
         <legend>Registration</legend>
         <label for ="myemail"class="block">E-mail:
           <input
             type="email"
-            id  ="myemail"
+            id="myemail"
             name="Registration"
             placeholder="email@example.com"
             required
@@ -88,44 +89,44 @@
         <label for="mypassword">Password:
           <input
             type="password"
-            id  ="mypassword"
+            id="mypassword"
             name="Registration"
             pattern="\w+"
-            minlength = "5"
-            maxlength = "32"
+            minlength="5"
+            maxlength="32"
             required
           >
         </label>
       </fieldset>
 
-      <fieldset>
+      <fieldset class="field">
         <legend>An interesting fact about you!</legend>
 
         <label class="block">Do you love cats?
           <label for="yescats">
             <input type="radio"
-              id  ="yescats"
+              id="yescats"
               name="Interesting_fact"
               value="Yes"
               required
             >
-          Yes
+            Yes
           </label>
           <label for="nocats">
             <input type="radio"
-              id  ="nocats"
+              id="nocats"
               name="Interesting_fact"
               value="No"
               required
             >
-          No
+            No
           </label>
         </label>
 
         <label for="mycolor" class="block">What is your favorite color?
           <input
             type="color"
-            id  ="mycolor"
+            id="mycolor"
             name="Interesting_fact"
             required
           >
@@ -134,7 +135,7 @@
         <label for="mytime" class="block">What time do you go to bed?
           <input
             type="time"
-            id  ="mytime"
+            id="mytime"
             step="2"
             name="Interesting_fact"
             required
@@ -191,22 +192,22 @@
 
         <label for="myrange">How do you rate our work?
           <input
-            type ="range"
-            id   ="myrange"
+            type="range"
+            id="myrange"
             value="0"
-            step ="5"
+            step="5"
            required
           >
           <output name="result" for="myrange"></output>
         </label>
       </fieldset>
 
-      <fieldset>
+      <fieldset class="field">
         <legend>Additional info:</legend>
         <label class="block">Comments:
           <textarea
             name="comments"
-            row ="5"
+            row="5"
             cols="20"
          ></textarea>
         </label>
