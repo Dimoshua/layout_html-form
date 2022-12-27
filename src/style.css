@@ -1,4 +1,9 @@
 /* styles go here */
-div {
-  line-height: 10px;
+.block {
+  margin-bottom: 10px;
+  display: block;
+}
+
+fieldset {
+  margin-bottom: 20px;
 }

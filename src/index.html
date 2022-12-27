@@ -13,6 +13,7 @@
   </head>
   <body>
     <script type="text/javascript" src="./main.js"></script>
+
     <form
       action="https://github.com/Dimoshua/layout_html-form.git"
       method="post"
@@ -20,123 +21,127 @@
     >
       <fieldset>
         <legend>Personal information</legend>
-        <label for="surname">Surname:</label>
-        <input type="text"
-               id  ="surname"
-               name="Personal_information"
-               autocomplete="off"
-               required
-        >
+        <label for="surname" class="block">Surname:
+          <input
+            type="text"
+            id  ="surname"
+            name="Personal_information"
+            autocomplete="off"
+            required
+          >
+        </label>
 
-        <div><br></div>
+        <label for="name" class="block">Name:
+          <input
+            type="text"
+            id  ="name"
+            name="Personal_information"
+            autocomplete="off"
+            required
+          >
+        </label>
 
-        <label for="name">Name:</label>
-        <input type="text"
-               id  ="name"
-               name="Personal_information"
-               autocomplete="off"
-               required
-        >
+        <label for="age" class="block">How old are You?
+          <input
+            type="number"
+            id  ="age"
+            name="Personal_information"
+            min = "1" max = "100"
+            value="12"
+            required
+          >
+        </label>
 
-        <div><br></div>
+        <label for="dateOfBirth" class="block">Full date of birth:
+          <input
+            type="date"
+            id  ="dateOfBirth"
+            min="01.01.1922"
+            max="01.01.2022"
+            name="Personal_information"
+            required
+          >
+        </label>
 
-        <label for="age">How old are You?</label>
-        <input type="number"
-               id  ="age"
-               name="Personal_information"
-               min = "1" max = "100"
-               value="12"
-               required
-        >
-
-        <div><br></div>
-
-        <label for="dateOfBirth">Full date of birth:</label>
-        <input type="date"
-               id  ="dateOfBirth"
-               min="01.01.1922"
-               max="01.01.2022"
-               name="Personal_information"
-               required
-        >
-
-        <div><br></div>
-
-        <label for="IofAgree">I accept the term of the agreement</label>
-        <input type="checkbox"
-               id  ="IofAgree"
-               name="Personal_information"
-               required
-        >
+        <label for="IofAgree">I accept the term of the agreement
+          <input
+            type="checkbox"
+            id  ="IofAgree"
+            name="Personal_information"
+            required
+          >
+        </label>
       </fieldset>
-
-      <div><br><br></div>
 
       <fieldset>
         <legend>Registration</legend>
-        <label for ="myemail">E-mail:</label>
-        <input type="email"
-               id  ="myemail"
-               name="Registration"
-               placeholder="email@example.com"
-               required
-        >
+        <label for ="myemail"class="block">E-mail:
+          <input
+            type="email"
+            id  ="myemail"
+            name="Registration"
+            placeholder="email@example.com"
+            required
+          >
+        </label>
 
-        <div><br></div>
-
-        <label for="mypassword">Password:</label>
-        <input type="password"
-               id  ="mypassword"
-               name="Registration"
-               pattern="\w+"
-               minlength = "5"
-               maxlength = "32"
-               required
-        >
+        <label for="mypassword">Password:
+          <input
+            type="password"
+            id  ="mypassword"
+            name="Registration"
+            pattern="\w+"
+            minlength = "5"
+            maxlength = "32"
+            required
+          >
+        </label>
       </fieldset>
-
-      <div><br><br></div>
 
       <fieldset>
         <legend>An interesting fact about you!</legend>
-        <label for="yescats">Do you love cats?</label>
-        <input type="radio"
-               id  ="yescats"
-               name="Interesting_fact"
-               value="Yes"
-               required
-        >
-        <label for="nocats">Yes</label>
-        <input type="radio"
-               id  ="nocats"
-               name="Interesting_fact"
-               value="No"
-               required
-        >
-        <label for="radio">No</label>
 
-        <div><br></div>
+        <label class="block">Do you love cats?
+          <label for="yescats">
+            <input type="radio"
+              id  ="yescats"
+              name="Interesting_fact"
+              value="Yes"
+              required
+            >
+          Yes
+          </label>
+          <label for="nocats">
+            <input type="radio"
+              id  ="nocats"
+              name="Interesting_fact"
+              value="No"
+              required
+            >
+          No
+          </label>
+        </label>
 
-        <label for="mycolor">What is your favorite color?</label>
-        <input type="color"
-               id  ="mycolor"
-               name="Interesting_fact"
-               required
-        >
+        <label for="mycolor" class="block">What is your favorite color?
+          <input
+            type="color"
+            id  ="mycolor"
+            name="Interesting_fact"
+            required
+          >
+        </label>
 
-        <div><br></div>
+        <label for="mytime" class="block">What time do you go to bed?
+          <input
+            type="time"
+            id  ="mytime"
+            step="2"
+            name="Interesting_fact"
+            required
+          >
+        </label>
 
-        <label for="mytime">What time do you go to bed?</label>
-        <input type="time"
-               id  ="mytime"
-               step="2"
-               name="Interesting_fact"
-               required
-        >
-
-        <div><br></div>
-
-        <label>What are your favorite brand of cars?
+        <label class="block">What are your favorite brand of cars?
           <select required multiple>
             <option value="BMW">BMW</option>
             <option value="Audi">Audi</option>
@@ -184,23 +189,21 @@
           </select>
         </label>
 
-        <div><br></div>
-
-        <label for="myrange">How do you rate our work?</label>
-        <input type="range"
-               id="myrange"
-               value="0"
-               step ="5"
-               required
-        >
-        <output name="result" for="myrange"></output>
+        <label for="myrange">How do you rate our work?
+          <input
+            type ="range"
+            id   ="myrange"
+            value="0"
+            step ="5"
+           required
+          >
+          <output name="result" for="myrange"></output>
+        </label>
       </fieldset>
-
-      <div><br><br></div>
 
       <fieldset>
         <legend>Additional info:</legend>
-        <label>Comments:
+        <label class="block">Comments:
           <textarea
             name="comments"
             row ="5"
@@ -208,20 +211,16 @@
          ></textarea>
         </label>
 
-        <div><br></div>
-
         <label>Would you recommend us?
           <select required>
             <option value="yes">yes</option>
             <option value="no">no</option>
           </select>
         </label>
-
       </fieldset>
 
-      <div><br><br></div>
-
       <button type="submit">Submit</button>
+
     </form>
   </body>
 </html>
