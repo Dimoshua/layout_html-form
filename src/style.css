@@ -5,6 +5,10 @@
   display: block;
 }
 
+.block:last-child {
+  margin-bottom: 0;
+}
+
 .field {
   margin-bottom: 20px;
 }
