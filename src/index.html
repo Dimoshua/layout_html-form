@@ -13,12 +13,12 @@
   </head>
   <body>
     <script type="text/javascript" src="./main.js"></script>
-
+    
     <form
       action="https://github.com/Dimoshua/layout_html-form.git"
       method="post"
-      oninput="result.value=myrange.value"
     >
+
       <fieldset class="field">
         <legend>Personal information</legend>
         <label for="surname" class="block">
@@ -113,7 +113,7 @@
             <input
               type="radio"
               id="yescats"
-              name="yescats"
+              name="cats"
               value="Yes"
               required
             >
@@ -124,7 +124,7 @@
             <input
               type="radio"
               id="nocats"
-              name="nocats"
+              name="cats"
               value="No"
               required
             >
@@ -162,7 +162,7 @@
           </select>
         </label>
 
-        <label for="myrange" class="block">
+        <label for="myrange" class="block" >
           How do you rate our work?
           <input
             type="range"
@@ -171,6 +171,7 @@
             value="0"
             step="5"
             required
+            oninput="result.value=myrange.value"
           >
           <output name="result" for="myrange"></output>
         </label>
